@@ -17,6 +17,26 @@ option = st.sidebar.selectbox("Select Input Method", ["Manual Text Input", "CSV 
 
 # Pre-trained model from Hugging Face
 sentiment_pipeline = pipeline("sentiment-analysis")
+st.title("Sentiment Analysis App")
+st.write(
+    """
+    This application provides an interactive platform for analyzing the sentiment of text data. You have two main options for input:
+
+    1. **Manual Text Input**: Enter a piece of text, and the app will use pre-trained models from Hugging Face to determine the sentiment. The sentiment can be categorized as positive, negative, neutral, sad, emotional, or angry. The app will also display the confidence score of the sentiment prediction.
+
+    2. **CSV File Upload**: Upload a CSV file containing text data. The app will allow you to select which column contains the text and optionally, which column contains the labels. You can then train various machine learning models on the text data to predict sentiment. After training, the app will display performance metrics for each model, including accuracy, precision, recall, and F1 score. Additionally, it will show the distribution of sentiments in your data.
+
+    Use the sidebar to choose your input method and to select the models you want to train if you opt for CSV file upload. 
+
+    The app features:
+    - **Manual Text Analysis**: Get instant sentiment predictions with confidence scores.
+    - **Model Training and Evaluation**: Train and evaluate multiple machine learning models on your text data.
+    - **Performance Metrics**: View detailed metrics and visualize the performance of the trained models.
+    - **Sentiment Distribution**: See the distribution of different sentiment categories in your dataset.
+
+    Explore the capabilities of sentiment analysis and gain insights from your text data with ease!
+    """
+)
 
 # Data Input and Preprocessing
 df = None
